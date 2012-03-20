@@ -16,27 +16,6 @@ PREV_ZENPACK_NAME = 'MSSQLServer'
 # Zenoss will not overwrite any changes you make below here.
 
 from setuptools import setup, find_packages
-from setuptools.dist import Distribution
-
-# setuptools will recognize platform-dependent eggs if you are
-# building the c code as a setuptool.Extension class within setup.py.
-# We are building from a makefile, so this automatic mechanism does not
-# work for us here.  Using a subclass of Distribution that overrides
-# has_ext_modules() to always return True works around this.
-# See Phillip J. Eby post to distutils-sig 2007-02-09 10:03 describing
-# this method.
-class MyDist(Distribution):
-     def has_ext_modules(self):
-         return True
-
-# 'make build' will build the c extensions and copy those files
-# as well as decimal.py into the ZenPack's lib dir.
-import subprocess
-p = subprocess.Popen('make build', shell=True)
-if p.poll() == None:
-        p.wait()
-if p.returncode != 0:
-    raise Exception('make exited with an error: %s' % p.returncode)
 
 setup(
     # This ZenPack metadata should usually be edited with the Zenoss
