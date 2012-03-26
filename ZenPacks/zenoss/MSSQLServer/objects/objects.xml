@@ -9,7 +9,7 @@ Microsoft SQL Server
 1433
 </property>
 <property visible="True" type="lines" id="zDeviceTemplates" >
-['Device', 'MSSQLServer']
+['Device_WMI', 'MSSQLServer']
 </property>
 <tomanycont id='rrdTemplates'>
 <object id='MSSQLServer' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
