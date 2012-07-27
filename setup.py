@@ -8,7 +8,7 @@ AUTHOR = 'Zenoss'
 LICENSE = ''
 NAMESPACE_PACKAGES = ['ZenPacks', 'ZenPacks.zenoss']
 PACKAGES = ['ZenPacks', 'ZenPacks.zenoss', 'ZenPacks.zenoss.MSSQLServer']
-INSTALL_REQUIRES = ['ZenPacks.zenoss.WindowsMonitor', 'ZenPacks.zenoss.PySamba']
+INSTALL_REQUIRES = ['ZenPacks.zenoss.WindowsMonitor', 'ZenPacks.zenoss.PySamba', 'Zenoss >= 2.5.7']
 COMPAT_ZENOSS_VERS = '>= 2.5.7'
 PREV_ZENPACK_NAME = 'MSSQLServer'
 # STOP_REPLACEMENTS
