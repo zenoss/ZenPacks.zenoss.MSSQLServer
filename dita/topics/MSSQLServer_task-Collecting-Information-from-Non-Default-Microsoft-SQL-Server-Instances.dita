@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:task" "task.dtd">
+<task id="d44e221">
+  <title>Collecting Information from Non-Default Microsoft SQL Server Instances</title>
+  <taskbody>
+    <context><p>The default Microsoft SQL Sever instance is SQLServer. The
+    monitoring template delivered with this ZenPack uses this
+    default instance to gather performance metrics. If you use a non-default
+    SQL Server instance, then <ph conkeyref="names/platform"/> does not automatically find and gather
+    information about it.</p>
+      
+      <p>To enable <ph conkeyref="names/platform"/> to monitor a non-default instance, you must
+    override the monitoring template:</p>
+    </context>
+    <steps-informal>
+      <ol>
+      <li>
+        <p>From Infrastructure &gt; Devices, click the device on which you
+        want to override the template.</p>
+      </li>
+
+      <li>
+        <p>Under Monitoring Templates, select the MSSQLServer
+        template.</p>
+      </li>
+
+      <li>
+        <p>From the Action menu, select Override Template Here.</p>
+
+        <p>The Override Templates dialog appears.</p>
+      </li>
+
+      <li>
+        <p>Select the MSSQLServer template in the list, and then click
+        <b>Submit</b>.</p>
+
+        <p>The template redisplays in the left panel, now identified as
+        "Locally Defined."</p>
+      </li>
+
+      <li>
+        <p>For each of the data sources in the Data Sources area, perform
+        these steps:</p>
+
+        <ol>
+          <li>
+            <p>Double-click the data source to edit it.</p>
+          </li>
+
+          <li>
+            <p>In the Perf Counter field, change the text "\SQLServer:" to
+            "\<i>MyInstance</i>:" (where
+            <i>MyInstance</i> is the name of the Microsoft SQL
+            Server database instance name.</p>
+          </li>
+
+          <li>
+            <p>Click <b>Save</b>.</p>
+          </li>
+        </ol>
+      </li>
+
+      <li>
+        <p>Remodel the device.</p>
+      </li>
+    </ol></steps-informal></taskbody></task>

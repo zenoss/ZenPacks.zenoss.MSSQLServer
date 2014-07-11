@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:reference" "reference.dtd">
+<reference id="reference_gnh_htg_tm">
+  <title>(MSSQLServer) Microsoft SQL Server</title>
+  <shortdesc>The <zenpack>ZenPacks.zenoss.MSSQLServer</zenpack> ZenPack uses WMI to monitor Microsoft SQL Server and its
+    related services.</shortdesc>
+  <refbody>
+    <section>
+      <note>This ZenPack is deprecated; see <xref keyref="reference-ZenPacks.zenoss.Microsoft.Windows"/>.</note>
+      <p>The ZenPack enables users to view graphs based on
+        Microsoft SQL Server Performance Counters and to monitor processes related
+        to SQL Server.</p>
+    </section>
+  </refbody>
+</reference>

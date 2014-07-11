@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task
+  PUBLIC "urn:pubid:zenoss.com:doctypes:dita:dtd:task" "task.dtd">
+<task id="d44e68"><title>Enable Monitoring</title><taskbody><context><p>All MS SQL Server services must have a device entry under the
+    <filepath>/Devices/Server/Windows/MSSQLServer</filepath>
+    device class. In addition, verify that your <ph conkeyref="names/platform"/> Windows service account has access to the MS
+    SQL Server service.</p></context><steps-informal><ol>
+      <li>
+        <p>Navigate to the device or device class in the <ph conkeyref="names/platform"/> interface.</p>
+
+        <ul>
+          <li>
+            <p>If applying changes to a device class:</p>
+
+            <ol>
+              <li>
+                <p>Select the class in the devices hierarchy.</p>
+              </li>
+
+              <li>
+                <p>Click <b>Details</b>.</p>
+              </li>
+
+              <li>
+                <p>Select Configuration Properties.</p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <p>If applying changes to a device:</p>
+
+            <ol>
+              <li>
+                <p>Click the device in the device list.</p>
+              </li>
+
+              <li>
+                <p>Select Configuration Properties.</p>
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <p>Verify the credentials for the service account to access the
+        service.</p>
+
+        <table>
+          <title>MS SQL Server Configuration Properties</title>
+
+          <tgroup cols="2">
+            <colspec colname="c1" colwidth="1*"/>
+            <colspec colname="c2" colwidth="4*"/>
+            <thead>
+              <row>
+                <entry>Name</entry>
+                <entry>Description</entry>
+              </row>
+            </thead>
+            <tbody>
+              <row>
+                <entry><p>zWinUser</p></entry>
+                <entry><p>Windows user with privileges to gather
+                performance information.</p></entry>
+              </row>
+              <row>
+                <entry><p>zWinPassword</p></entry>
+                <entry><p>Password for the above user.</p></entry>
+              </row>
+            </tbody>
+          </tgroup>
+        </table>
+      </li>
+
+      <li>
+        <p>Click <b>Save</b> to save your
+        changes.</p>
+
+        <p>You will now be able to start collecting the MS SQL Server
+        server metrics from this device.</p>
+      </li>
+
+      <li>
+        <p>Navigate to Graphs to see placeholders for graphs. After
+        approximately fifteen minutes, the graphs start to become populated
+        with information.</p>
+      </li>
+    </ol>
+      <note>For more information about user credentials and troubleshooting 
+        WMI connections, see <xref keyref="reference-ZenPacks.zenoss.WindowsMonitor"/>.</note>
+    </steps-informal></taskbody></task>
